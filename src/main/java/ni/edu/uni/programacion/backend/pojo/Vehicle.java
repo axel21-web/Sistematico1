@@ -20,7 +20,7 @@ public class Vehicle {
     private String interiorColor;//30
     private String miles;//7
     private float price;//7
-    private Transmission transmission;//20
+    public Transmission transmission;//20
     private String engine;//50
     private String image;//100
     private String status;//20

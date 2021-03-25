@@ -5,6 +5,7 @@
  */
 package ni.edu.uni.programacion.views.panels;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
@@ -97,7 +98,14 @@ public class PnlVehicle extends javax.swing.JPanel {
         return txtStyle;
     }
 
-    
+    public ButtonGroup getBtngTrans() {
+        return btngTrans;
+    }
+
+    public void setBtngTrans(ButtonGroup btngTrans) {
+        this.btngTrans = btngTrans;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -230,6 +238,8 @@ public class PnlVehicle extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(2, 2, 2, 2);
         jPanel2.add(jLabel5, gridBagConstraints);
+
+        spnYear.setModel(new javax.swing.SpinnerNumberModel(2010, null, null, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
@@ -296,6 +306,8 @@ public class PnlVehicle extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(2, 2, 2, 2);
         jPanel2.add(jLabel9, gridBagConstraints);
+
+        spnMiles.setModel(new javax.swing.SpinnerNumberModel());
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 8;
@@ -312,6 +324,8 @@ public class PnlVehicle extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.insets = new java.awt.Insets(2, 2, 2, 2);
         jPanel2.add(jLabel10, gridBagConstraints);
+
+        spnPrice.setModel(new javax.swing.SpinnerNumberModel(0.0f, null, null, 1.0f));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 9;

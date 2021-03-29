@@ -9,7 +9,8 @@ package ni.edu.uni.programacion.backend.pojo;
  *
  * @author yasser.membreno
  */
-public class Vehicle {
+public class Vehicle 
+{
     private int stockNumber;//20
     private int year;//4
     private String make;//30
@@ -161,7 +162,13 @@ public class Vehicle {
     public void setImage(String image) {
         this.image = image;
     }
-    
-    
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
     
 }

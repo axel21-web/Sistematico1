@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ni.edu.uni.programacion.views.panels;
 
 import javax.swing.ButtonGroup;
@@ -15,94 +10,116 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author Sistemas-05
+ * @author Axel Moreno
  */
-public class PnlVehicle extends javax.swing.JPanel {
+public class PnlVehicle extends javax.swing.JPanel 
+{
 
     /**
      * Creates new form PnlVehicle
      */
-    public PnlVehicle() {
+    public PnlVehicle() 
+    {
         initComponents();
     }
 
-    public JButton getBtnBrowse() {
+    public JButton getBtnBrowse() 
+    {
         return btnBrowse;
     }
 
-    public JButton getBtnCancel() {
+    public JButton getBtnCancel() 
+    {
         return btnCancel;
     }
 
-    public JButton getBtnSave() {
+    public JButton getBtnSave() 
+    {
         return btnSave;
     }
 
-    public JComboBox<String> getCmbEColor() {
+    public JComboBox<String> getCmbEColor() 
+    {
         return cmbEColor;
     }
 
-    public JComboBox<String> getCmbIColor() {
+    public JComboBox<String> getCmbIColor() 
+    {
         return cmbIColor;
     }
 
-    public JComboBox<String> getCmbMake() {
+    public JComboBox<String> getCmbMake() 
+    {
         return cmbMake;
     }
 
-    public JComboBox<String> getCmbModel() {
+    public JComboBox<String> getCmbModel() 
+    {
         return cmbModel;
     }
 
-    public JComboBox<String> getCmbStatus() {
+    public JComboBox<String> getCmbStatus() 
+    {
         return cmbStatus;
     }
 
-    public JFormattedTextField getFmtVin() {
+    public JFormattedTextField getFmtVin()
+    {
         return fmtVin;
     }
 
-    public JRadioButton getRbtnAut() {
+    public JRadioButton getRbtnAut() 
+    {
         return rbtnAut;
     }
 
-    public JRadioButton getRbtnMan() {
+    public JRadioButton getRbtnMan() 
+    {
         return rbtnMan;
     }
 
-    public JSpinner getSpnMiles() {
+    public JSpinner getSpnMiles()
+    {
         return spnMiles;
     }
 
-    public JSpinner getSpnPrice() {
+    public JSpinner getSpnPrice() 
+    {
         return spnPrice;
     }
 
-    public JSpinner getSpnYear() {
+    public JSpinner getSpnYear()
+    {
         return spnYear;
     }
 
-    public JTextField getTxtEngine() {
+    public JTextField getTxtEngine() 
+    {
         return txtEngine;
     }
 
-    public JTextField getTxtImage() {
+    public JTextField getTxtImage() 
+    {
         return txtImage;
     }
 
-    public JTextField getTxtStock() {
+    public JTextField getTxtStock() 
+    {
         return txtStock;
     }
 
-    public JTextField getTxtStyle() {
+    public JTextField getTxtStyle() 
+    {
         return txtStyle;
     }
 
-    public ButtonGroup getBtngTrans() {
+    public ButtonGroup getBtngTrans() 
+    {
         return btngTrans;
     }
 
-    public void setBtngTrans(ButtonGroup btngTrans) {
+    public void setBtngTrans(ButtonGroup btngTrans) 
+    {
         this.btngTrans = btngTrans;
     }
 
@@ -154,7 +171,7 @@ public class PnlVehicle extends javax.swing.JPanel {
 
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
         btnSave.setText("Save");
@@ -165,6 +182,7 @@ public class PnlVehicle extends javax.swing.JPanel {
 
         add(jPanel1, java.awt.BorderLayout.PAGE_END);
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);

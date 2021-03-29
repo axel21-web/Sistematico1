@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ni.edu.uni.programacion.backend.dao.implementation;
 
 import com.google.gson.Gson;
@@ -19,7 +14,8 @@ import ni.edu.uni.programacion.backend.pojo.Vehicle;
  *
  * @author yasser.membreno
  */
-public class JsonVehicleDaoImpl extends RandomTemplate implements VehicleDao{        
+public class JsonVehicleDaoImpl extends RandomTemplate implements VehicleDao
+{        
     private final int SIZE = 800;    
     private Gson gson;    
     
@@ -77,7 +73,7 @@ public class JsonVehicleDaoImpl extends RandomTemplate implements VehicleDao{
     }
 
     @Override
-    public Collection<Vehicle> getAll() throws IOException {
+    public List<Vehicle> getAll() throws IOException {
         List<Vehicle> vehicles = new ArrayList<>();
         Vehicle vehicle = null;
         

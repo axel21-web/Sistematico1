@@ -7,7 +7,7 @@ package ni.edu.uni.programacion.backend.pojo;
 
 /**
  *
- * @author Sistemas-05
+ * @author Axel Moreno
  */
 public class VehicleSubModel {
     private String make;

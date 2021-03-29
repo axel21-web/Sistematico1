@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ni.edu.uni.programacion.controllers;
 
 import com.google.gson.Gson;
@@ -28,9 +23,10 @@ import ni.edu.uni.programacion.views.panels.PnlVehicle;
 
 /**
  *
- * @author Sistemas-05
+ * @author Axel Moreno
  */
-public class PnlVehicleController implements ActionListener{
+public class PnlVehicleController implements ActionListener
+{
     private PnlVehicle pnlVehicle;
     private JsonVehicleDaoImpl jvdao;
     private List<VehicleSubModel> vSubModels;
@@ -43,21 +39,21 @@ public class PnlVehicleController implements ActionListener{
     private String[] STATUS = new String[]{"Active", "Inactive"};
     private DefaultComboBoxModel cmbModelStatus;
     
-    public PnlVehicleController(PnlVehicle pnlVehicle) throws FileNotFoundException {
+    public PnlVehicleController(PnlVehicle pnlVehicle) throws FileNotFoundException 
+    {
         this.pnlVehicle = pnlVehicle;
         initComponent();        
     }
     
-    private void initComponent()  throws FileNotFoundException{
+    private void initComponent()  throws FileNotFoundException
+    {
         jvdao = new JsonVehicleDaoImpl();
         gson = new Gson();
         
         pnlVehicle.getBtnBrowse().addActionListener(this);
         pnlVehicle.getBtnSave().addActionListener(this);
         
-        JsonReader jreader = new JsonReader(
-               new BufferedReader(new InputStreamReader(
-                       getClass().getResourceAsStream("/jsons/vehicleData.json")))
+        JsonReader jreader = new JsonReader(new BufferedReader(new InputStreamReader(getClass().getResourceAsStream("/jsons/vehicleData.json")))
         );
         
         Type listType = new TypeToken<ArrayList<VehicleSubModel>>(){}.getType();
@@ -78,7 +74,8 @@ public class PnlVehicleController implements ActionListener{
         pnlVehicle.getCmbStatus().setModel(cmbModelStatus);
     }
     
-    private void btnSaveActionListener(ActionEvent e){
+    private void btnSaveActionListener(ActionEvent e)
+    {
         int stock, year;
         String make, model, style, vin, eColor, iColor, miles, engine, image, status;
         float price;
@@ -102,14 +99,17 @@ public class PnlVehicleController implements ActionListener{
         
         V = new Vehicle(stock, year, make, model, style, vin, iColor, iColor, miles, price, transmission, engine, image, status);
         
-        try {
+        try
+        {
             jvdao.create(V);
             JOptionPane.showMessageDialog(null, "Archivo guardado correctamente");
-        } catch (Exception ex) {
+        } catch (Exception ex) 
+        {
         }
     }
     
-    private void btnBrowserActionListener(ActionEvent e){
+    private void btnBrowserActionListener(ActionEvent e)
+    {
         FC = new JFileChooser();
         
         int option = FC.showOpenDialog(null);
@@ -123,7 +123,8 @@ public class PnlVehicleController implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent arg0) {
+    public void actionPerformed(ActionEvent arg0) 
+    {
         if (arg0.getActionCommand().equalsIgnoreCase("Save")){
             btnSaveActionListener(arg0);
         }
